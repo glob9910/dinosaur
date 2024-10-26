@@ -130,7 +130,6 @@ public class Game extends JPanel implements ActionListener, KeyListener {
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         paint(g);
-        //Toolkit.getDefaultToolkit().sync(); // nie dziala :(
     }
 
     @Override
@@ -202,6 +201,7 @@ public class Game extends JPanel implements ActionListener, KeyListener {
     public void actionPerformed(ActionEvent e) {
         move();
         repaint();
+        Toolkit.getDefaultToolkit().sync();
         score++;
 
         if(gameOver) {
